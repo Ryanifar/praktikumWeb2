@@ -29,7 +29,7 @@
         if($bintang!=0): 
             echo "Jumlah bintang $bintang <br><br>";
             for ($i=0; $i<$bintang; $i++){
-                echo "<img src='./star.png' width='70px' height='70px'>";
+                echo "<img src='./source/star.png' width='70px' height='70px'>";
             }
             ?>
             <form action="" method="post">
