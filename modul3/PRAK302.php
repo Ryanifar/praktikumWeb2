@@ -1,33 +1,39 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+<html> 
 <head>
-    <title>Soal 2</title>
-</head>
-<body>
-    <form method="post">
-        Tinggi : <input type="text" name="tinggi"><br>
-        Alamat Gambar : <input type="text" name="gambar"><br>
-        <button type="submit">Cetak</button>
-    </form>
-    <?php 
-        if(isset($_POST['tinggi']) && isset($_POST['gambar'])) {
-            $i = 0;
-            $j = 0;
-            $tinggi = $_POST['tinggi'];
-            $gambar = $_POST['gambar'];
-            while($i < $tinggi) {
-                $i++;
-                while($j < $tinggi) {
-                    $j++;
-                    if($i <= $j) {
-                        echo "<img src='$gambar' width='50' height='50'></img>";
-                    }else {
-                        echo "<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICXAcTgAAG6EJuyAAAAAElFTkSuQmCC' width='50' height='50'></img>";
-                    }
-                }
-                echo "<br>";
-                $j = 0;
-            }
-        }
-    ?>
-</body>
-</html>
+    <title>SOAL 2</title> 
+</head> 
+<body> 
+    <form method="post"> 
+        Tinggi : 
+        <input type="text" name="tinggi" value="<?=isset($_POST['tinggi']) ? $_POST['tinggi'] : ''?>">
+        <br> 
+        Alamat Gambar : 
+        <input type=" text" name="url" value="<?=isset($_POST['url']) ? $_POST['url'] : ''?>"> 
+        <br> 
+        <button type="submit" name="submit"> Cetak </button> 
+    </form> 
+    <?php
+    echo "<br>";
+    if (isset($_POST['submit'])) {
+        $tinggi = $_POST['tinggi']; 
+        $url = $_POST['url']; 
+        $a = 1;          
+        while ($a <= $tinggi) { 
+            $b = 1; 
+            while ($b <= $a) {
+                echo "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;"; 
+                $b++; 
+            } 
+            $c = $tinggi;
+            while ($c >= $a) { 
+                echo "<img src='$url' width='20px' height='20px'>";
+                $c--;
+            }    
+            echo "<br>"; 
+            $a++; 
+        } 
+    } 
+    ?> 
+</body> 
+</html> 
