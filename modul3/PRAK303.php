@@ -15,7 +15,7 @@
             $atas = $_POST['atas'];
             do {
                 if (($bawah + 7) % 5 == 0) {
-                    echo "<img src=\"star-image.png\" height=\"30\" width=\"30\">";
+                    echo "<img src=\"source/star.png\" height=\"30\" width=\"30\">";
                 } else {
                     echo "$bawah ";
                 }
