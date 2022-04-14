@@ -12,14 +12,14 @@
     <?php
     if (isset($_POST['submit'])) {
         $jumlah = $_POST['jumlah'];
-        $perulagan = 1;
-        while ($perulagan <= $jumlah) {
-            if ($perulagan % 2 == 0) {
-                echo "<h1 style=\"color:green\">Peserta ke-$perulagan</h1>";
+        $perulangan = 1;
+        while ($perulangan <= $jumlah) {
+            if ($perulangan % 2 == 0) {
+                echo "<h1 style=\"color:green\">Peserta ke-$perulangan</h1>";
             } else {
-                echo "<h1 style=\"color:red\">Peserta ke-$perulagan</h1>";
+                echo "<h1 style=\"color:red\">Peserta ke-$perulangan</h1>";
             }
-            $perulagan++;
+            $perulangan++;
         }
     }
     ?>
