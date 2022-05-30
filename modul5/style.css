@@ -1,0 +1,21 @@
+td{
+	width: 140px;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+  	color:white;
+  	padding: 5px;
+  	background-color: lightsalmon;
+  	border-radius: 7px;
+  	margin-top: 8px;
+}
+.edit{
+	background-color: rgb(1, 207, 1);
+}
+.hapus{
+	background-color: rgb(255, 24, 24);
+}
+th{
+	background-color: #bbbbbb;
+}
