@@ -18,10 +18,8 @@ if (!isset($_SESSION['nomor_member'])) {
             <a href="Member.php">Data Member</a>
             <a href="Buku.php">Data Buku</a>
             <a href="Peminjaman.php">Data Peminjaman</a>
-            <br><br>
-            <a href="Logout.php">Logout</a>
         </nav>
-        <br>
+        <a href="Logout.php">Logout</a>
     </center>
 </body>
 </html>

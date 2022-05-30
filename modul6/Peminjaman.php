@@ -7,13 +7,14 @@ if (isset($_GET['id_peminjaman'])) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Data Peminjaman</title>
+   <title>Peminjaman</title>
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <center>
         <br>
         <nav>
+            <a href="index.php">Home</a>
             <a href="Member.php">Data Member</a>
             <a href="Buku.php">Data Buku</a>
             <a href="Peminjaman.php">Data Peminjaman</a>

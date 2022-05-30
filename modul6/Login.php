@@ -17,7 +17,7 @@ if ($hasil) {
     }
 } else {
     echo "Nomor member atau Password yang anda masukkan salah";
-    echo "<br> anda akan dialihkan ke halaman login setelah 5 detik";
+    echo "<br> anda akan dialihkan ke halaman login setelah 3 detik";
     echo "<br> atau klik disini untuk <a href='FormLogin.php'>login</a>";
-    header("refresh:5;url= FormLogin.php");
+    header("refresh:3;url= FormLogin.php");
 }

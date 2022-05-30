@@ -1,8 +1,11 @@
 <?php
 session_start();
 include 'Koneksi.php';
-if (isset($_SESSION['nomor_member'])) {
-    header("Location: index.php");
+// if (isset($_SESSION['nomor_member'])) {
+//     header("Location: index.php");
+// }
+if(isset($_COOKIE['nomor_member'])){
+    header('location:index.php');
 }
 ?>
 <!DOCTYPE html>

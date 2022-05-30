@@ -18,6 +18,7 @@ if (isset($_GET['id_member'])) {
     <center>
         <br>
         <nav>
+            <a href="index.php">Home</a>
             <a href="Member.php">Data Member</a>
             <a href="Buku.php">Data Buku</a>
             <a href="Peminjaman.php">Data Peminjaman</a>
