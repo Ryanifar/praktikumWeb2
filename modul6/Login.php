@@ -21,3 +21,4 @@ if ($hasil) {
     echo "<br> atau klik disini untuk <a href='FormLogin.php'>login</a>";
     header("refresh:3;url= FormLogin.php");
 }
+?>
