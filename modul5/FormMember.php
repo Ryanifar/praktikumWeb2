@@ -43,7 +43,6 @@ if (isset($_GET['id_member'])) {
                     Alamat
                 </td>
                 <td>
-
                     <textarea name="alamat" cols="30" rows="10" required> <?php echo (isset($_GET['id_member'])) ?  $result[0]["alamat"]  : ""; ?> </textarea> <br>
                 </td>
             </tr>
@@ -53,7 +52,6 @@ if (isset($_GET['id_member'])) {
                 </td>
                 <td>
                     <input type="datetime-local" name="tgl_daftar" <?php echo (isset($_GET['id_member'])) ?  "value = " . date('Y-m-d\TH:i', strtotime($result[0]["tgl_mendaftar"])) . "" : "value = '' "; ?> required> <br>
-
                 </td>
             </tr>
             <tr>
@@ -62,7 +60,6 @@ if (isset($_GET['id_member'])) {
                 </td>
                 <td>
                     <input type="date" name="tgl_terakhir_bayar" <?php echo (isset($_GET['id_member'])) ?  "value = " . $result[0]["tgl_terakhir_bayar"] . "" : "value = '' "; ?> required><br>
-
                 </td>
             </tr>
             <tr>
@@ -95,5 +92,4 @@ if (isset($_GET['id_member'])) {
     }
     ?>
 </body>
-
 </html>

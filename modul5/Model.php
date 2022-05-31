@@ -1,13 +1,10 @@
 <?php
 require("./Koneksi.php");
-
-// membuat fungsi tampil
 function tampildata($nama_tabel)
 {
     $stmt = koneksi()->prepare("SELECT * FROM $nama_tabel");
     $stmt->execute();
     $result = $stmt->fetchAll();
-
     if (!empty($result)) {
         if ($nama_tabel == "member") {
             foreach ($result as $row) {
@@ -57,7 +54,6 @@ function tampildata($nama_tabel)
     }
 }
 
-// membuat fungsi tambah
 function tambahdatamember($nama, $nomor_member, $alamat, $tgl_mendaftar, $tgl_terakhir_bayar)
 {
     $sql = "INSERT INTO `member` ( `nama`, `nomor_member`, `alamat`, `tgl_mendaftar`, `tgl_terakhir_bayar`) VALUES (:nama,:nomor_member,:alamat,:tgl_mendaftar,:tgl_terakhir_bayar)";
@@ -88,7 +84,6 @@ function tambahdatapeminjaman($tglpinjam, $tglkembali)
     }
 }
 
-// membuat fungsi edit
 function editmember()
 {
     $stmt = koneksi()->prepare("SELECT * FROM member where id_member=" . $_GET["id_member"]);
@@ -109,8 +104,6 @@ function editpeminjaman(){
     $GLOBALS['result'] = $stmt->fetchAll();
 }
 
-
-// membuat fungsi update
 function updatemember($id, $nama, $no_member, $almt, $tgl_daftar, $tgl_terakhir_bayar)
 {
     $pdo_statement = koneksi()->prepare(
@@ -144,9 +137,6 @@ function updatepeminjaman($id, $tglpinjam, $tglkembali)
     }
 }
 
-
-// membuat fungsi untuk hapus data
-
 function hapusmember($id_member)
 {
     $stmt = koneksi()->prepare("DELETE FROM member where id_member=" . $id_member);
@@ -172,3 +162,4 @@ function hapuspeminjaman($id_peminjaman)
         header('location:Peminjaman.php');
     }
 }
+?>

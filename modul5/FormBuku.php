@@ -43,7 +43,6 @@ if (isset($_GET['id_buku'])) {
                     Penerbit
                 </td>
                 <td>
-
                     <input type="text" name="penerbit" <?php echo (isset($_GET['id_buku'])) ?  "value = " . $result[0]["penerbit"] . "" : "value = '' "; ?> required> <br>
                 </td>
             </tr>
@@ -53,7 +52,6 @@ if (isset($_GET['id_buku'])) {
                 </td>
                 <td>
                     <input type="text" name="thnterbit" <?php echo (isset($_GET['id_buku'])) ?  "value = " . $result[0]["tahun_terbit"] . "" : "value = '' "; ?> required> <br>
-
                 </td>
             </tr>
             <tr>
@@ -72,7 +70,6 @@ if (isset($_GET['id_buku'])) {
             </tr>
         </table>
     </form>
-
     <?php
     if (isset($_POST['submit'])) {
         tambahdatabuku($_POST['judul'], $_POST['penulis'], $_POST['penerbit'], $_POST['thnterbit']);
