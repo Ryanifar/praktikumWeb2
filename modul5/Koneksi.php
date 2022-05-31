@@ -14,3 +14,4 @@ function koneksi()
     }
     return $pdo_conn;
 }
+?>
